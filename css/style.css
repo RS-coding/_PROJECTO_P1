@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+   font-family: 'Roboto', sans-serif;
+    background :#ccc;
+    margin:0;
+    padding:0;
+}
+
+.hero{
+    background-image:url(../imagens/bg-3.jpg);
+    height:500px;
+    background-position: right center;
+    background-size:cover;
+    /*corrigir com overflow hidden o bug da margin que aparece em cima do menu.O que faz é esconder esse bocado e ajustar crrectamente*/
+    overflow:hidden;
+}
+
+
+/*como as lis têm um comportamento de inline podemos
+pegar no conjunto ul e dar a propriedade de text-align 
+como se assim se trata-se de um texto*/
+.hero nav ul{
+    text-align:right;
+    /*
+    float:right;
+    */
+   margin:20px 50px 0px 0px;
+}
+/*listas ficam com propriedades de bloco mas em inline*/
+.hero nav li{
+    display:inline-block;
+    list-style-type: none;
+    border:1px solid white;
+    margin-left:10px;
+   
+}
+
+/* para dar propriedades ao <a> sendo um elemento em linha 
+tem que se colocar display:block para receber propriedades 
+tais como padding.background etc..*/
+
+.hero nav a{
+    background-color:rgba(0,0,0, 0.2);
+    display:block;
+    color:white;
+    padding :15px 20px;   
+    text-decoration:none;
+    text-transform:uppercase;
+    font-size:12px;
+    letter-spacing: 2px;
+}
+
+.hero nav a:hover{
+    background-color:rgba(0,0,0, 0.7);
+}
+
+.hero-content{
+    text-align:center;
+    color:white;
+    margin-top:150px;
+}
+
+.hero-content h1{
+    text-transform:uppercase;
+    font-size:52px;
+    text-shadow: 3px 3px 2px #333;
+}
+
+.hero-content a{
+    background-color:rgba(0,0,0, .8);
+    display:inline-block;
+    text-decoration:none;
+    color:white;
+    padding:10px;
+    border-bottom:2px solid white;
+    margin:60px;
+}
+
+main{
+    width:80%;
+    margin:0 auto;  
+}
+
+.content-section{
+    background-color:white;
+    padding:10px;
+    margin-top:15px;
+    /*para corrigir o problema do float left
+    nos elemenetos child - cards*/
+    overflow:auto;
+}
+
+.card{
+    width:32%;
+    /* se colocar display inline block  não será a melhor 
+    opção porque torna os elementos com comportamentos de 
+    texto criando espaços sem sentido.logo a melhor abordagem é o float nestre caso left  */
+    float:left;
+    /*colocar sempre cores e borders em divs e 
+    sections para ajudar na construção do codigo e depois sim retirar*/
+    /*border:2px solid blue;*/
+    box-sizing:border-box;
+   
+}
+
+/*fazer as contas sempre para bater tudo certo até dar 100%*/
+.card:first-child, .card:nth-child(2){
+    margin-right:2%;
+}
+
+.card img{
+    /*ter atenção e colocar sempre as imgs
+    a 100% para elas não sairem das divs-muito importante*/
+    width:100%;
+    /*serve para não criar espaços indesejaveis
+    tipicos de inline (text, img , a  etc..)
+    portanto a img se quer ter um comportamento
+    de bloco colocar sempre display:block; */
+    display:block;
+}
+
+.card p{
+    background-color:#3e3e3e ;
+    color:white;
+    padding:15px;
+    text-transform:uppercase;
+}
+
+.article_title{
+    width:100%;
+    background-color:#ccc;
+    border-bottom-style:solid;
+}
+
+.article_title h2{
+    margin:0;
+    line-height:50px;
+    padding-left:10px;
+}
+
+.article_content p{
+    padding-top:10px;
+    text-indent:10px;
+}
+
+.content-section:last-child{
+    margin-bottom:15px;
+}
+
+footer{
+    background-color:grey;
+    height:50px;
+}
+
+footer p{
+    text-align:center;
+    line-height:50px;
+    color:white;
+    text-shadow:3px 3px 3px #333;
+}
+
+
